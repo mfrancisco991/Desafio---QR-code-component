@@ -20,29 +20,43 @@
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .box {
+    #container {
+      width: 360px;
+      height: 500px;
+      background-color: red;
+
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: transparent;
       text-align: center;
-      height: 100vh;
-      display: flex;
-      width: 100%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    .imagem {
-      display: block;
+
+    #info {
+      width: 360px;
+      height: 560px;
+
       background-color: #fff;
-      max-width: 260px;
       padding: 20px;
       border-radius: 10px;
     }
 
-    .imagem img {
-      width: 100%;
+    #info img {
+      width: 360px;
       border-radius: 10px;
+      padding-bottom: 10px;
     }
-    .imagem h1 {
+    #info h1 {
+      padding-bottom: 10px;
+      font-size: 22px;
+      color: #08172c;
+    }
+    #info p {
+      color: #adadb7;
       font-size: 20px;
     }
   </style>
@@ -50,21 +64,29 @@
 
 <body>
 
-  <main class="box">
-    <div class="imagem">
-      <img src="images/image-qr-code.png" alt="">
-        <h1>Improve your front-end skills by building projects</h1>
-      <p>  
-          Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-      </p>
-    </div>
+  <main>
+
+      <div id="container">
+
+        <div id="info">
+          <img src="images/image-qr-code.png" alt="">
+
+            <h1>Improve your front-end skills by building projects</h1>
+
+          <p>
+              Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+          </p>
+
+        </div>
+      </div>
+
   </main>
 
   
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io/profile/mfrancisco991" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Marcos</a>.
+  <div role="contentinfo" class="attribution" style="position: absolute; bottom: 0;">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/mfrancisco991">@mfrancisco991</a>.
   </div>
   
 </body>
